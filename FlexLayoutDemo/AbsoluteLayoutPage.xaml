@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexLayoutDemo.AbsoluteLayoutPage"
+             Title="AbsoluteLayoutPage">
+   <!--Comment each button and test-->
+    <VerticalStackLayout>
+        <AbsoluteLayout>
+            <Button 
+                Text="Fixed"/>
+            <!--<Button 
+                AbsoluteLayout.LayoutBounds=".2,.5,150,100"
+                Text="Absolute X,Y and Height,Width"/>
+            <Button Text="Relative X,Y and Absolute Height,Width"
+                    AbsoluteLayout.LayoutBounds=".7,.8,250,100"
+                    AbsoluteLayout.LayoutFlags="XProportional,YProportional"/>
+            <Button Text=" Absolute X,Y and Relative Height,Width"
+                    AbsoluteLayout.LayoutBounds="10,250,.5,.8"
+                    AbsoluteLayout.LayoutFlags="SizeProportional"/>
+            <Button Text=" Relative X,Y and Height,Width"
+                    AbsoluteLayout.LayoutBounds=".5,.9,.5,.8"
+                    AbsoluteLayout.LayoutFlags="All" />-->
+        </AbsoluteLayout>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             x:Class="FlexLayoutDemo.GridPage"
+             Title="GridPage">
+    <VerticalStackLayout>
+        <Label 
+            HorizontalOptions="Start" Margin="20">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Grid" FontSize="Large"/>
+                        <Span Text="{x:Static system:Environment.NewLine}"/>
+                        <Span Text="This is a test demo of Grid"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Grid Margin="20" ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*">
+          <!--#region First line-->
+            <Button Text="1"
+                    Margin="5"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="AliceBlue"/>
+            <Button Text="2"
+                    Margin="5"
+                    Grid.Column="1"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="AliceBlue"/>
+            <Button Text="3"
+                    Margin="5"
+                    Grid.Column="2"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="AliceBlue"/>
+            <!--#endregion-->
+            <!--#region second line-->
+            <Button Text="4"
+                    Margin="5"
+                    Grid.Row="1"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="AliceBlue"/>
+            <Button Text="5"
+                    Margin="5"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="AliceBlue"/>
+            <Button Text="6"
+                    Margin="5"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="AliceBlue"/>
+            <!--#endregion-->
+            <!--#region third line-->
+            <Button Text="7"
+                    Margin="5"
+                    Grid.Row="2"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="AliceBlue"/>
+            <Button Text="8"
+                    Margin="5"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="AliceBlue"/>
+            <Button Text="9"
+                    Margin="5"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="AliceBlue"/>
+            <!--#endregion-->
+            <!--#region fourth line-->
+            <Button Text="*"
+                    Margin="5"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="3"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="AliceBlue"/>
+            <!--#endregion-->
+            <!--#region fourth column-->
+            <Button Text="0"
+                    Margin="5"
+                    Grid.Row="0"
+                    Grid.Column="3"
+                    Grid.RowSpan="2"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="AliceBlue"/>
+            <!--#endregion-->
+            <!--#region fourth column-->
+            <Button Text="#"
+                    Margin="5"
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    Grid.RowSpan="4"
+                    TextColor="Black"
+                    FontSize="Large"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="AliceBlue"/>
+            <!--#endregion-->
+
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
