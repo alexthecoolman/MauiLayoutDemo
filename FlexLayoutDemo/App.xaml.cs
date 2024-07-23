@@ -2,7 +2,8 @@
 //#define absolutelayoutpage
 //#define bindablelayoutpage
 //#define customlayoutpage
-#define gridlayoutpage
+//#define gridlayoutpage
+#define dashboarLayout
 
 namespace FlexLayoutDemo;
 
@@ -10,7 +11,7 @@ public partial class App : Application
 {
 	public App()
 	{
-		InitializeComponent();
+		this.InitializeComponent();
 #if flexlayoutpage
         MainPage = new FlexLayoutPage();
 #endif
@@ -28,6 +29,9 @@ public partial class App : Application
 #endif
 #if gridlayoutpage
         MainPage = new GridPage();
+#endif
+#if dashboarLayout
+        this.MainPage = new DashboardLayoutPage();
 #endif
 
     }

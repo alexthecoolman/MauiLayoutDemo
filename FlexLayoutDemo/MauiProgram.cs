@@ -1,4 +1,6 @@
-﻿namespace FlexLayoutDemo;
+﻿using FlexLayoutDemo.CustomLayout;
+
+namespace FlexLayoutDemo;
 
 public static class MauiProgram
 {
@@ -7,6 +9,10 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.ConfigureMauiHandlers(handlers =>
+			{
+				handlers.AddHandler(typeof(DashboardLayout), typeof(DashboardLayoutHandler));
+			})
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
